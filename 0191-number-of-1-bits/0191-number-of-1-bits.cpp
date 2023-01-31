@@ -10,7 +10,7 @@ public:
                 OnesCount++;
             }
             
-            Num /= 2;
+            Num *= 0.5;
         }
         
         return OnesCount;
