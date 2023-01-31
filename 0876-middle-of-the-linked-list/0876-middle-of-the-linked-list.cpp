@@ -11,6 +11,7 @@
 class Solution {
 public:
     ListNode* middleNode(ListNode* Head) {
+        ListNode* MiddleNode = Head;
         ListNode* End = Head;
         int NodesCount = 0;
         
@@ -20,10 +21,7 @@ public:
             End = End->next;
         }
         
-        const int MiddleNodeIndex = NodesCount / 2;
-        ListNode* MiddleNode = Head;
-        
-        for (int i = 0; i < MiddleNodeIndex; i++)
+        for (int i = 0; i < NodesCount / 2; i++)
         {
             MiddleNode = MiddleNode->next;
         }
