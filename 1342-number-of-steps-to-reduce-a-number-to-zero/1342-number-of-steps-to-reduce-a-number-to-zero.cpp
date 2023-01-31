@@ -9,7 +9,7 @@ public:
             
             if (Num % 2 == 0)
             {
-                Num /= 2;
+                Num *= 0.5;
             }
             else
             {
