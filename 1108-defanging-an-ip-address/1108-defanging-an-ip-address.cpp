@@ -12,22 +12,5 @@ public:
         }
         
         return DefangedAddress;
-        
-        
-        /*string DefangedAddress = "";
-        
-        for (char Letter: Address)
-        {
-            if (Letter == '.')
-            {
-                DefangedAddress += "[.]";
-            }
-            else
-            {
-                DefangedAddress += Letter;
-            }
-        }
-        
-        return DefangedAddress;*/
     }
 };
