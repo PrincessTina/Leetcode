@@ -2,8 +2,10 @@ class Solution {
 public:
     vector<int> kWeakestRows(vector<vector<int>>& Matrix, int k) 
     {
-        vector<int> Values;
-        vector<int> Indexes;
+        // vector<int> Values;
+        // vector<int> Indexes;
+        // vector<int> Result;
+        vector<pair<int, int>> Map;
         vector<int> Result;
         
         for (int i = 0; i < Matrix.size(); i++)
@@ -22,12 +24,23 @@ public:
                 }
             }
             
-            Insert(SoldiersCount, i, Values, Indexes);
+            Map.push_back({i, SoldiersCount});
+            //Insert(SoldiersCount, i, Values, Indexes);
         }
+        
+        sort(Map.begin(), Map.end(), [](pair<int, int> Value1, pair<int, int> Value2) 
+        {
+            if (Value1.second == Value2.second)
+            {
+                return Value1.first < Value2.first;
+            }
+            
+            return Value1.second < Value2.second;
+        });
         
         for (int i = 0; i < k; i++)
         {
-            Result.push_back(Indexes[i]);
+            Result.push_back(Map[i].first);
         }
         
         return Result;
