@@ -2,7 +2,7 @@ class Solution {
 public:
     int romanToInt(string Input) 
     {
-        map<string, int> RomanNums;
+        unordered_map<string, int> RomanNums;
         
         RomanNums.insert({"I", 1});
         RomanNums.insert({"V", 5});
