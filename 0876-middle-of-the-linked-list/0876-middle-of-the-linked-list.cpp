@@ -11,21 +11,15 @@
 class Solution {
 public:
     ListNode* middleNode(ListNode* Head) {
-        ListNode* MiddleNode = Head;
-        ListNode* End = Head;
-        int NodesCount = 0;
+        vector<ListNode*> Nodes;
+        ListNode* Node = Head;
         
-        while (End != nullptr)
+        while (Node != nullptr)
         {
-            NodesCount++;
-            End = End->next;
+            Nodes.push_back(Node);
+            Node = Node->next;
         }
         
-        for (int i = 0; i < NodesCount / 2; i++)
-        {
-            MiddleNode = MiddleNode->next;
-        }
-        
-        return MiddleNode;
+        return Nodes[Nodes.size() / 2];
     }
 };
