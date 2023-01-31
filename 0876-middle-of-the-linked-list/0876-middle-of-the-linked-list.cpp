@@ -20,6 +20,6 @@ public:
             Node = Node->next;
         }
         
-        return Nodes[Nodes.size() / 2];
+        return Nodes[Nodes.size() * 0.5];
     }
 };
