@@ -28,55 +28,5 @@ public:
         }
         
         return -1;
-        
-        /*int LeftIndex = 0;
-        int RightIndex = Nums.size() - 1;
-        int LeftSum = Nums[LeftIndex];
-        int RightSum = Nums[RightIndex];
-        
-        while (LeftIndex != RightIndex)
-        {
-            if (RightIndex < LeftIndex)
-            {
-                return -1;
-            }
-            
-            if (abs(LeftSum) < abs(RightSum))
-            {
-                LeftIndex++;
-                LeftSum += Nums[LeftIndex];
-                
-                continue;
-            }
-            
-            if (abs(RightSum) < abs(LeftSum))
-            {
-                RightIndex--;
-                RightSum += Nums[RightIndex];
-                
-                continue;
-            }
-            
-            if (abs(LeftSum) == abs(RightSum))
-            {
-                LeftIndex++;
-                RightIndex--;
-                
-                LeftSum += Nums[LeftIndex];
-                RightSum += Nums[RightIndex];
-            }
-        }
-        
-        if (LeftSum == RightSum)
-        {
-            return LeftIndex;
-        }
-        
-        if (LeftSum + RightSum == 0)
-        {
-            return 0;
-        }
-        
-        return -1;*/
     }
 };
