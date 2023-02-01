@@ -35,23 +35,5 @@ public:
         }
         
         return S1 == S2;
-        
-        /*for (int i = 0; i < s.size(); i++)
-        {
-            if (s[i] == '#')
-            {
-                s.erase(i - 1, 2);
-            }
-        }
-        
-        for (int i = 0; i < t.size(); i++)
-        {
-            if (t[i] == '#')
-            {
-                t.erase(i - 1, 2);
-            }
-        }
-        
-        return s == t;*/
     }
 };
