@@ -16,15 +16,8 @@ public:
         
         for (int i = 0; i < NumbersCount; i++)
         {
-            int TenDegree = pow(10, NumbersCount - i - 1);
-            long Addition = (x / TenDegree) * pow(10, i);
-            
-            // if (abs(Reversed + Addition) > 2147483647)
-            // {
-            //     return 0;
-            // }
-            
-            Reversed += Addition;
+            const int TenDegree = pow(10, NumbersCount - i - 1);
+            Reversed += (x / TenDegree) * pow(10, i);
             x %= TenDegree;
         }
         
