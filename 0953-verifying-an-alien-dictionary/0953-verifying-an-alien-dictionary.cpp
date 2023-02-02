@@ -26,7 +26,8 @@ public:
                 {
                     break;
                 }
-                else if (Dictionary[Words[i][j]] > Dictionary[Words[i + 1][j]])
+                
+                if (Dictionary[Words[i][j]] > Dictionary[Words[i + 1][j]])
                 {
                     return false;
                 }
