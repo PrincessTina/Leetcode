@@ -1,7 +1,7 @@
 class Solution {
 public:
     int reverse(int x) {
-        int Reversed = 0;
+        long Reversed = 0;
         int NumbersCount = to_string(x).size();
         
         if (x == 0)
@@ -19,13 +19,18 @@ public:
             int TenDegree = pow(10, NumbersCount - i - 1);
             long Addition = (x / TenDegree) * pow(10, i);
             
-            if (abs(Reversed + Addition) > 2147483647)
-            {
-                return 0;
-            }
+            // if (abs(Reversed + Addition) > 2147483647)
+            // {
+            //     return 0;
+            // }
             
             Reversed += Addition;
             x %= TenDegree;
+        }
+        
+        if (abs(Reversed) > 2147483647)
+        {
+            return 0;
         }
         
         return Reversed;
