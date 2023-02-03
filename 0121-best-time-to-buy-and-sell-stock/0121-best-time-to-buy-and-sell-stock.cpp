@@ -27,29 +27,5 @@ public:
         }
         
         return MaxProfit;
-        
-        /*int BuyDate = 0;
-        int SellDate = Prices.size() - 1;
-        int BuyPrice = Prices[BuyDate];
-        int SellPrice = Prices[SellDate];
-        
-        while (BuyDate <= SellDate)
-        {
-            if (Prices[BuyDate] < BuyPrice)
-            {
-                BuyPrice = Prices[BuyDate];
-            }
-            
-            if (Prices[SellDate] > SellPrice)
-            {
-                SellPrice = Prices[SellDate];
-            }
-            
-            BuyDate++;
-            SellDate--;
-        }
-        
-        const int Profit = SellPrice - BuyPrice;    
-        return Profit > 0 ? Profit : 0;*/
     }
 };
