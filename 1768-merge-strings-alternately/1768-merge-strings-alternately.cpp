@@ -31,16 +31,5 @@ public:
         }
         
         return Result;
-        
-        /*
-        0 1 2
-        a b c
-        
-        0 1 2
-        p q r
-        
-        0 1 2 3 4 5
-        a p b q c r
-        */
     }
 };
