@@ -1,36 +1,13 @@
 class Solution {
 public:
     char findTheDifference(string S1, string S2) {
-        unordered_map<char, int> Diff;
+        char Result = '\0';
         
-        for (char c: S1)
+        for (int i = 0; i < S1.size(); i++)
         {
-            if (Diff.count(c) != 0)
-            {
-                Diff[c]++;
-                continue;
-            }
-            
-            Diff.insert({c, 1});
+            Result = Result xor S1[i] xor S2[i];
         }
         
-        for (char c: S2)
-        {
-            if (Diff.count(c) != 0)
-            {
-                Diff[c]--;
-                
-                if (Diff[c] == 0)
-                {
-                    Diff.erase(c);
-                }
-            }
-            else
-            {
-                Diff.insert({c, 1});
-            }
-        }
-        
-        return Diff.begin()->first;
+        return Result xor S2[S2.size() - 1];
     }
 };
