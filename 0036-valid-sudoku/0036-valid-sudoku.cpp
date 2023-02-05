@@ -11,7 +11,9 @@ public:
             {
                 if (Board[i][j] != '.')
                 {
-                    if (!FillCube(Cubes, i, j, Board[i][j]))
+                    const int CubeIndex = 3 * (i / 3) + (j / 3);
+                    
+                    if (Cubes[CubeIndex].count(Board[i][j]) != 0)
                     {
                         return false;
                     }
@@ -21,6 +23,7 @@ public:
                         return false;
                     }
                     
+                    Cubes[CubeIndex].insert(Board[i][j]);
                     Row.insert(Board[i][j]);
                 }
                 
@@ -39,19 +42,6 @@ public:
             Column.clear();
         }
         
-        return true;
-    }
-    
-    bool FillCube(vector<unordered_set<char>>& Cubes, int i, int j, char Num)
-    {
-        int Index = 3 * (i / 3) + (j / 3);
-        
-        if (Cubes[Index].count(Num) != 0)
-        {
-            return false;
-        }
-        
-        Cubes[Index].insert(Num);
         return true;
     }
 };
