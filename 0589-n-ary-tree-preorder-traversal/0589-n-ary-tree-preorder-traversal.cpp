@@ -21,13 +21,14 @@ public:
 class Solution {
 public:
     vector<int> preorder(Node* Root) {
-        vector<int> Values;
-        
-        GoDeep(Root, Values);
+        GoDeep(Root);
         return Values;
     }
     
-    void GoDeep(Node* Current, vector<int>& Values)
+private:
+    vector<int> Values;
+    
+    void GoDeep(Node* Current)
     {
         if (Current == nullptr)
         {
@@ -38,7 +39,7 @@ public:
         
         for (Node* Child: Current->children)
         {
-            GoDeep(Child, Values);
+            GoDeep(Child);
         }
     }
 };
