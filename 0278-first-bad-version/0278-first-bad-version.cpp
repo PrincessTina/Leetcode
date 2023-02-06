@@ -8,7 +8,7 @@ public:
         long RightBorder = n;
         long VersionIndex = 1;
         
-        while (LeftBorder != RightBorder && RightBorder >= 1)
+        while (LeftBorder != RightBorder)
         {
             long Center = (LeftBorder + RightBorder) / 2;
             
