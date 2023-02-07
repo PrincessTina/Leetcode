@@ -7,7 +7,7 @@ public:
         
         while (LeftBorder != RightBorder && RightBorder >= 0)
         {
-            Center = (LeftBorder + RightBorder) * 0.5;
+            Center = (LeftBorder + RightBorder) / 2;
             
             if (Target < Nums[Center])
             {
