@@ -12,6 +12,11 @@ public:
                 {
                     Jumps.push_back(Jumps[i] + 1);
                 }
+                
+                if (Jumps.size() == Nums.size())
+                {
+                    break;
+                }
             }
         }
         
