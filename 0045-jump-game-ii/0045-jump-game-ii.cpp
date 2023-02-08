@@ -15,7 +15,7 @@ public:
                 
                 if (Jumps.size() == Nums.size())
                 {
-                    break;
+                    return Jumps[Nums.size() - 1];
                 }
             }
         }
