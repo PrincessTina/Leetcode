@@ -23,7 +23,7 @@ public:
                     continue;
             }
             
-            if (!Stack.empty() && Pair == Stack.top())
+            if (!Stack.empty() && Stack.top() == Pair)
             {
                 Stack.pop();
             }
