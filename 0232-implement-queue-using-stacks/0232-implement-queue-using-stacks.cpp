@@ -3,7 +3,7 @@ public:
     MyQueue() {}
     
     void push(int X) {
-        if (First == nullptr)
+        if (empty())
         {
             First = new ListNode(X);
             Last = First;
