@@ -11,12 +11,13 @@
  */
 class Solution {
 public:
-    vector<vector<int>> Matrix;
-    
     vector<vector<int>> levelOrder(TreeNode* Root) {
         GoDeep(Root, 0);
         return Matrix;
     }
+    
+private:
+    vector<vector<int>> Matrix;
     
     void GoDeep(TreeNode* Node, int Level)
     {
