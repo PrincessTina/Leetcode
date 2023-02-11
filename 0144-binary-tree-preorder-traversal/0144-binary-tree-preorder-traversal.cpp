@@ -48,34 +48,6 @@ public:
             }
         }
         
-        /*while (Node != nullptr)
-        {
-            Stack.push(Node);
-            Result.push_back(Node->val);
-            
-            if (Node->left != nullptr)
-            {
-                Node = Node->left;
-                continue;
-            }
-            
-            Stack.pop();
-            
-            if (Node->right != nullptr)
-            {
-                Node = Node->right;
-                continue;
-            }
-            
-            if (!Stack.empty())
-            {
-                Node = Stack.top();
-                continue;
-            }
-            
-            break;
-        }*/
-        
         return Result;
     }
 };
