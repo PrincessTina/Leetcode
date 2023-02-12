@@ -1,0 +1,101 @@
+class Solution {
+public:
+    int uniquePaths(int m, int n) {
+        int Result = 0;
+        
+        if (m == 1 || n == 1)
+        {
+            return 1;
+        }
+        
+        for (int i = 1; i <= m; i++)
+        {
+            Result += Get(i, n - 1);
+        }
+        
+        return Result;
+        
+        /*int Result[3] = {0, m, 0};
+        int Digit = 0;
+        
+        if (m == 1 || n == 1)
+        {
+            return 1;
+        }
+        
+        if (m == 2)
+        {
+            return n;
+        }
+        
+        if (n == 2)
+        {
+            return m;
+        }
+        
+        for (int i = 1; i <= m; i++)
+        {
+            Digit += i;
+        }
+        
+        Result[2] = Digit;
+        
+        for (int i = 4; i <= n; i++)
+        {
+            Result[0] = Result[1];
+            Result[1] = Result[2];
+            Result[2] = 2 * Result[1] - Result[0] + 1;
+        }
+        
+        return Result[2];*/
+    }
+    
+private:
+    int Values[100][100];
+    
+    int Get(int i, int j)
+    {
+        if (j < i)
+        {
+            const int t = j;
+            j = i;
+            i = t;
+        }
+        
+        if (i == 1)
+        {
+            return 1;
+        }
+        
+        if (i == 2)
+        {
+            return j;
+        }
+        
+        if (Values[i][j] != 0)
+        {
+            return Values[i][j];
+        }
+        
+        int Value = 0;
+        
+        if (i == 3)
+        {
+            for (int k = 1; k <= j; k++)
+            {
+                Value += k;
+            }
+            
+            Values[i][j] = Value;
+            return Value;
+        }
+        
+        for (int k = 1; k <= j; k++)
+        {
+            Value += Get(k, i - 1);
+        }
+        
+        Values[i][j] = Value;
+        return Value;
+    }
+};
