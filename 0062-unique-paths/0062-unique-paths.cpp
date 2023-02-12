@@ -14,40 +14,6 @@ public:
         }
         
         return Result;
-        
-        /*int Result[3] = {0, m, 0};
-        int Digit = 0;
-        
-        if (m == 1 || n == 1)
-        {
-            return 1;
-        }
-        
-        if (m == 2)
-        {
-            return n;
-        }
-        
-        if (n == 2)
-        {
-            return m;
-        }
-        
-        for (int i = 1; i <= m; i++)
-        {
-            Digit += i;
-        }
-        
-        Result[2] = Digit;
-        
-        for (int i = 4; i <= n; i++)
-        {
-            Result[0] = Result[1];
-            Result[1] = Result[2];
-            Result[2] = 2 * Result[1] - Result[0] + 1;
-        }
-        
-        return Result[2];*/
     }
     
 private:
