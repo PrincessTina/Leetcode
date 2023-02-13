@@ -13,7 +13,7 @@ class Solution {
 public:
     TreeNode* searchBST(TreeNode* Root, int Value) {
         Target = Value;
-        SearchTarget(Root);
+        SearchTree(Root);
         
         return Result;
     }
@@ -22,7 +22,7 @@ private:
     TreeNode* Result = nullptr;
     int Target = 0;
     
-    void SearchTarget(TreeNode* Node)
+    void SearchTree(TreeNode* Node)
     {
         if (Node == nullptr)
         {
@@ -37,11 +37,11 @@ private:
         
         if (Target < Node->val)
         {
-            SearchTarget(Node->left);
+            SearchTree(Node->left);
         }
         else
         {
-            SearchTarget(Node->right);
+            SearchTree(Node->right);
         }
     }
 };
