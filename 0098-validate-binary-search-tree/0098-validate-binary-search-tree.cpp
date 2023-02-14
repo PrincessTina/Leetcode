@@ -12,8 +12,6 @@
 class Solution {
 public:
     bool isValidBST(TreeNode* Root) {
-        // value, IsLess
-        
         GoDeep(Root->left, {{Root->val, true}});
         GoDeep(Root->right, {{Root->val, false}});
         
