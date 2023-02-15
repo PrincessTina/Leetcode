@@ -13,27 +13,21 @@ public:
             else
             {
                 Map.insert({Word, 1});
+                Result.push_back(Word);
             }
         }
         
-        vector<pair<string, int>> Vector(Map.size());
-        copy(Map.begin(), Map.end(), Vector.begin());
-        
-        sort(Vector.begin(), Vector.end(), [](const pair<string, int>& Word1, const pair<string, int>& Word2)
+        sort(Result.begin(), Result.end(), [&Map](const string& Word1, const string& Word2)
         {
-            if (Word1.second == Word2.second)
+            if (Map[Word1] == Map[Word2])
             {
-                return Word1.first < Word2.first;
+                return Word1 < Word2;
             }
             
-            return Word1.second > Word2.second;
+            return Map[Word1] > Map[Word2];
         });
         
-        for (int i = 0; i < k; i++)
-        {
-            Result.push_back(Vector[i].first);
-        }
-        
+        Result.erase(Result.begin() + k, Result.end());
         return Result;
     }
 };
