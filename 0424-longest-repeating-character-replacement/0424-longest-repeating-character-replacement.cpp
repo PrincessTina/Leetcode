@@ -1,18 +1,19 @@
 class Solution {
 public:
     int characterReplacement(string Word, int k) {
+        unordered_set<char> Letters;
         int MaxLength = 0;
         
-        for (char c = 'A'; c <= 'Z'; c++)
+        for (char c: Word)
+        {
+            Letters.insert(c);
+        }
+        
+        for (char c: Letters)
         {
             int Replacements = k;
             int LeftIndex = 0;
             int RightIndex = 0;
-            
-            if (Word.find(c) == -1)
-            {
-                continue;
-            }
             
             while (RightIndex < Word.size())
             {
