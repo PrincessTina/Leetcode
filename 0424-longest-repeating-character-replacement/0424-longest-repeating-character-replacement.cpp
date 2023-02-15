@@ -1,13 +1,5 @@
 class Solution {
 public:
-    /*
-        ABABCAAAA
-          l      r
-         
-        k=2
-        w=2
-        m=8
-    */
     int characterReplacement(string Word, int k) {
         int MaxLength = 0;
         
@@ -35,25 +27,17 @@ public:
                     continue;
                 }
                 
-                if (Word[RightIndex] == c)
+                if (Word[RightIndex] != c)
                 {
-                    RightIndex++;
-                }
-                else if (Replacements > 0)
-                {
-                    Replacements--;
-                    RightIndex++;
-                }
-                else
-                {
-                    if (MaxLength < RightIndex - LeftIndex)
+                    if (Replacements == 0 && MaxLength < RightIndex - LeftIndex)
                     {
                         MaxLength = RightIndex - LeftIndex;
                     }
                     
-                    RightIndex++;
                     Replacements--;
                 }
+                
+                RightIndex++;
             }
             
             if (Replacements >= 0 && MaxLength < RightIndex - LeftIndex)
