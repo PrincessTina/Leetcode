@@ -27,22 +27,5 @@ public:
         {
             Nums[k + i] = Temp[i];
         }
-        
-        
-        /*for (int i = Nums.size() - k; i < Nums.size(); i++)
-        {
-            Nums[i - k - 1] = Nums[i];
-        }*/
-        
-        /* 
-        1 2 3 4 4 4 5 6 7
-        5 6 7 1 2 3 4 4 4
-        
-        1 2 3 4 4 5 6 7
-        5 6 7 1 2 3 4 4
-        
-        1 2 3 4 5 6 7
-        5     1     4
-        */
     }
 };
