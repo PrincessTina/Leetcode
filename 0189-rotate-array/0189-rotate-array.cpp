@@ -1,6 +1,11 @@
 class Solution {
 public:
     void rotate(vector<int>& Nums, int k) {
+        if (Nums.size() == 1)
+        {
+            return;
+        }
+        
         while (Nums.size() < k)
         {
             k -= Nums.size();
