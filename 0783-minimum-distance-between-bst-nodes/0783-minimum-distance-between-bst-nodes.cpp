@@ -29,10 +29,9 @@ private:
         
         GoDeep(Node->left);
         
-        if (Previous != -1 && (Min == -1 || abs(Node->val - Previous) < Min))
+        if (Previous != -1 && (Min == -1 || Node->val - Previous < Min))
         {
-            Min = abs(Node->val - Previous);
-            
+            Min = Node->val - Previous;
         }
         
         Previous = Node->val;
