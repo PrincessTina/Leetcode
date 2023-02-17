@@ -6,10 +6,7 @@ public:
             return;
         }
         
-        while (Nums.size() < k)
-        {
-            k -= Nums.size();
-        }
+        k %= Nums.size();
         
         vector<int> Temp(Nums.size() - k);
         
