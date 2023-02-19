@@ -48,9 +48,9 @@ public:
         
         while (true)
         {
-            for (pair<int, int> One: Digits)
+            for (pair<int, int> Digit: Digits)
             {
-                FillField(Field, One.first, One.second, Temp);
+                FillField(Field, Digit.first, Digit.second, Temp);
             }
             
             if (Temp.empty())
