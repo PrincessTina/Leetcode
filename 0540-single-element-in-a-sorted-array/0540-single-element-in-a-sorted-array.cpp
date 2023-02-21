@@ -6,7 +6,7 @@ public:
         
         while (true)
         {
-            int Center = (Left + Right) * 0.5;
+            const int Center = (Left + Right) * 0.5;
             
             if (Center - 1 >= 0 && Nums[Center] == Nums[Center - 1])
             {
