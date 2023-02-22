@@ -2,13 +2,19 @@ class Solution {
 public:
     int shipWithinDays(vector<int>& Weights, int Days) {
         int Sum = 0;
+        int Max = 0;
         
         for (int Weight: Weights)
         {
+            if (Weight > Max)
+            {
+                Max = Weight;
+            }
+            
             Sum += Weight;
         }
         
-        for (int i = 1; i <= Sum; i++)
+        for (int i = Max; i <= Sum; i++)
         {
             if (CheckWeight(Weights, Days, i))
             {
