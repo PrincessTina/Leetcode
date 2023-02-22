@@ -6,13 +6,15 @@ public:
         
         for (int Weight: Weights)
         {
-            if (Weight > Max)
-            {
-                Max = Weight;
-            }
+            // if (Weight > Max)
+            // {
+            //     Max = Weight;
+            // }
             
             Sum += Weight;
         }
+        
+        Max = Sum / Days;
         
         for (int i = Max; i <= Sum; i++)
         {
