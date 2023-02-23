@@ -11,7 +11,6 @@ public:
                 if (Grid[i][j] == 2)
                 {
                     Rot(Grid, Result, i, j, 0);
-                    //break;
                 }
             }
         }
@@ -32,23 +31,10 @@ public:
             }
         }
         
-        // for (int i = 0; i < Grid.size(); i++)
-        // {
-        //     for (int j = 0; j < Grid[0].size(); j++)
-        //     {
-        //         if (Grid[i][j] != 0)
-        //         {
-        //             return -1;
-        //         }
-        //     }
-        // }
-        
         return Minutes;
     }
     
 private:
-    //int Minutes = 0;
-    
     void Rot(vector<vector<int>>& Grid, vector<vector<int>>& Result, int i, int j, int Minute)
     {
         if (Grid[i][j] == 0)
@@ -69,18 +55,6 @@ private:
         }
         
         Result[i][j] = Minute;
-        
-        // if (Grid[i][j] == 0)
-        // {
-        //     return;
-        // }
-        
-        // if (Minutes < Minute)
-        // {
-        //     Minutes = Minute;
-        // }
-        
-        //Grid[i][j] = 0;
         
         if (i - 1 >= 0)
         {
