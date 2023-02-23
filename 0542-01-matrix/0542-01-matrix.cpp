@@ -21,14 +21,16 @@ public:
 private:
     void FillField(vector<vector<int>>& Matrix, vector<vector<int>>& Result, int i, int j, int Count)
     {
-        if (Result[i][j] != -1 && Result[i][j] < Count)
+        if (Result[i][j] == -1)
+        {
+            if (Matrix[i][j] == 0)
+            {
+                Count = 0;
+            }
+        }
+        else if (Result[i][j] < Count)
         {
             return;
-        }
-        
-        if (Matrix[i][j] == 0)
-        {
-            Count = 0;
         }
         
         Result[i][j] = Count;
