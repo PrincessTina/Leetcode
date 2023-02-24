@@ -12,7 +12,7 @@ public:
         Deviation = *Set.rbegin() - *Set.begin();
         int Previous = Deviation;
 
-        while (true)
+        /*while (true)
         {
             while (*Set.rbegin() % 2 == 0)
             {
@@ -54,7 +54,7 @@ public:
         for (int Num: Nums)
         {
             Set.insert(Num);
-        }
+        }*/
         
         while (true)
         {
