@@ -23,7 +23,7 @@ public:
         
         while (*Set.rbegin() % 2 == 0)
         {
-            Set.insert(*Set.rbegin() / 2);
+            Set.insert(*Set.rbegin() * 0.5);
             Set.erase(*Set.rbegin());
 
             if (*Set.rbegin() - *Set.begin() < Deviation)
