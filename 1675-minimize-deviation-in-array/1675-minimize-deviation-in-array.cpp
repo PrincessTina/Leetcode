@@ -11,50 +11,6 @@ public:
         
         Deviation = *Set.rbegin() - *Set.begin();
         int Previous = Deviation;
-
-        /*while (true)
-        {
-            while (*Set.rbegin() % 2 == 0)
-            {
-                Set.insert(*Set.rbegin() / 2);
-                Set.erase(*Set.rbegin());
-
-                if (*Set.rbegin() - *Set.begin() < Deviation)
-                {
-                    Deviation = *Set.rbegin() - *Set.begin();
-                }
-            }
-
-            while (*Set.begin() % 2 != 0)
-            {
-                Set.insert(*Set.begin() * 2);
-                Set.erase(*Set.begin());
-
-                if (*Set.rbegin() - *Set.begin() < Deviation)
-                {
-                    Deviation = *Set.rbegin() - *Set.begin();
-                }
-            }
-
-            if (*Set.begin() % 2 == 0 && *Set.rbegin() % 2 != 0)
-            {
-                break;
-            }
-
-            if (Previous == Deviation)
-            {
-                break;
-            }
-
-            Previous = Deviation;
-        }
-        
-        Set.clear();
-        
-        for (int Num: Nums)
-        {
-            Set.insert(Num);
-        }*/
         
         while (true)
         {
@@ -79,6 +35,8 @@ public:
                     Deviation = *Set.rbegin() - *Set.begin();
                 }
             }
+            
+            break;
 
             if (*Set.begin() % 2 == 0 && *Set.rbegin() % 2 != 0)
             {
