@@ -6,11 +6,14 @@ public:
             return false;
         }
         
-        while (n % 2 == 0)
+        for (int i = 0; i <= 32; i++)
         {
-            n /= 2;
+            if (n == pow(2, i))
+            {
+                return true;
+            }
         }
         
-        return n == 1;
+        return false;
     }
 };
