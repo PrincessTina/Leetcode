@@ -39,13 +39,4 @@ public:
         
         return MinPath;
     }
-    
-    /*
-        2
-       5 6
-     11 10 13
-    15 11 18 16
-    
-    Matrix[i][j] = Min(Matrix[i - 1][j - 1], Matrix[i - 1][j]);
-    */
 };
