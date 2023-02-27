@@ -15,8 +15,6 @@ public:
                 {
                     Capitals[i] += Capitals[i - 2];
                 }
-                
-                //Capitals[i] += Capitals[i - 2];
             }
             
             if (Capitals[i] > Loot)
@@ -26,9 +24,5 @@ public:
         }
         
         return Loot;
-        
-        /*
-        2 1 3 3
-        */
     }
 };
