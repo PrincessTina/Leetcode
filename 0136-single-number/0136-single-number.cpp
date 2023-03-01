@@ -1,7 +1,16 @@
 class Solution {
 public:
     int singleNumber(vector<int>& Nums) {
-        unordered_set<int> Set;
+        int Result = 0;
+        
+        for (int Num: Nums)
+        {
+            Result = Result xor Num;
+        }
+        
+        return Result;
+        
+        /*unordered_set<int> Set;
         
         for (int Num: Nums)
         {
@@ -15,6 +24,6 @@ public:
             }
         }
         
-        return *Set.begin();
+        return *Set.begin();*/
     }
 };
