@@ -4,16 +4,20 @@ public:
         vector<int> Array(k);
         MakeArray(Array, 0, 1);
         
-        while (true)
+        int i = Array.size() - 1;
+        
+        while (i >= 0)
         {
-            int i = Array.size() - 1;
-            
-            while (Array[i] < n - Array.size() + 1 + i)
+            if (Array[i] < n - Array.size() + 1 + i)
             {
                 MakeArray(Array, i, Array[i] + 1);
+                i = Array.size() - 1;
+                continue;
             }
             
-            i = Array.size() - 2;
+            i--;
+            
+            /*i = Array.size() - 2;
             
             while (i >= 0 && Array[i] >= n - Array.size() + 1 + i)
             {
@@ -25,7 +29,7 @@ public:
                 break;
             }
             
-            MakeArray(Array, i, Array[i] + 1);
+            MakeArray(Array, i, Array[i] + 1);*/
         }
         
         return Result;
