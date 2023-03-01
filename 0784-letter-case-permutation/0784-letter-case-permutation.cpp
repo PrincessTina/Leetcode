@@ -9,7 +9,7 @@ private:
     vector<string> Result;
     char Diff = 'A' - 'a';
     
-    void MakeString(string String, int i)
+    void MakeString(string& String, int i)
     {
         while (i < String.size())
         {
