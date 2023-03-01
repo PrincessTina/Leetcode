@@ -16,20 +16,6 @@ public:
             }
             
             i--;
-            
-            /*i = Array.size() - 2;
-            
-            while (i >= 0 && Array[i] >= n - Array.size() + 1 + i)
-            {
-                i--;
-            }
-            
-            if (i < 0)
-            {
-                break;
-            }
-            
-            MakeArray(Array, i, Array[i] + 1);*/
         }
         
         return Result;
