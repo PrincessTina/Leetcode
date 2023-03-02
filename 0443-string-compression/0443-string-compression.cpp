@@ -38,7 +38,6 @@ public:
             Char = Chars[i];
         }
         
-        //Chars.erase(Chars.begin() + InsertionIndex - 1, Chars.end());
         return InsertionIndex;
     }
 };
