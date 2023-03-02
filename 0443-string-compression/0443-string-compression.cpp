@@ -22,7 +22,7 @@ public:
             {
                 string SLength = to_string(Length);
                 
-                for (char c: SLength)
+                for (char& c: SLength)
                 {
                     Chars[InsertionIndex] = c;
                     InsertionIndex++;
