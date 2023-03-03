@@ -35,38 +35,15 @@ private:
         GoDeep(Node->left);
         GoDeep(Node->right);
         
-        if (Node->left == nullptr || Node->right == nullptr)
-        {
-            if (Node->left == nullptr)
-            {
-                Node->val = Node->right->val + 1;
-            }
-            else
-            {
-                Node->val = Node->left->val + 1;
-            }
-            
-            if (Node->val > 1)
-            {
-                IsBalanced = false;
-            }
-            
-            return;
-        }
+        int Left = Node->left == nullptr ? -1 : Node->left->val;
+        int Right = Node->right == nullptr ? -1 : Node->right->val;
         
-        if (abs(Node->right->val - Node->left->val) > 1)
+        if (abs(Right - Left) > 1)
         {
             IsBalanced = false;
             return;
         }
         
-        if (Node->right->val > Node->left->val)
-        {
-            Node->val = Node->right->val + 1;
-        }
-        else
-        {
-            Node->val = Node->left->val + 1;
-        }
+        Node->val = Left > Right ? Left + 1 : Right + 1;
     }
 };
