@@ -26,17 +26,11 @@ private:
             return;
         }
         
-        if (Node->left == nullptr && Node->right == nullptr)
-        {
-            Node->val = 0;
-            return;
-        }
-        
         GoDeep(Node->left);
         GoDeep(Node->right);
         
-        int Left = Node->left == nullptr ? -1 : Node->left->val;
-        int Right = Node->right == nullptr ? -1 : Node->right->val;
+        const int Left = Node->left == nullptr ? -1 : Node->left->val;
+        const int Right = Node->right == nullptr ? -1 : Node->right->val;
         
         if (abs(Right - Left) > 1)
         {
