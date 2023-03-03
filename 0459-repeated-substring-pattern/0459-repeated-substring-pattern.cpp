@@ -5,13 +5,12 @@ public:
         
         while (Length < String.size())
         {
+            int n = 1;
+            
             if (String.size() % Length != 0)
             {
-                Length++;
-                continue;
+                goto Cycle;
             }
-            
-            int n = 1;
             
             while (n < String.size() / Length)
             {
