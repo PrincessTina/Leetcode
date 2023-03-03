@@ -5,14 +5,12 @@ public:
         
         while (Length < String.size())
         {
-            int n = 1;
-            
             if (String.size() % Length != 0)
             {
                 goto Cycle;
             }
             
-            while (n < String.size() / Length)
+            for (int n = 1; n < String.size() / Length; n++)
             {
                 for (int i = 0; i < Length; i++)
                 {
@@ -23,8 +21,6 @@ public:
                     
                     goto Cycle;
                 }
-                
-                n++;
             }
             
             return true;
