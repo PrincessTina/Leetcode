@@ -3,7 +3,7 @@ public:
     int evalRPN(vector<string>& Tokens) {
         stack<int> Stack;
         
-        for (string Token: Tokens)
+        for (string& Token: Tokens)
         {
             if (Token.size() != 1 || Token[0] >= '0')
             {
