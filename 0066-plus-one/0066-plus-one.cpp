@@ -3,7 +3,7 @@ public:
     vector<int> plusOne(vector<int>& Digits) {
         int i = Digits.size() - 1;
         
-        while (true)
+        while (i >= 0)
         {
             if (Digits[i] < 9)
             {
