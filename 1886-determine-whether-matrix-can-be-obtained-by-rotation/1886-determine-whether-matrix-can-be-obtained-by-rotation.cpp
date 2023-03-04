@@ -1,12 +1,12 @@
 class Solution {
 public:
     bool findRotation(vector<vector<int>>& Matrix, vector<vector<int>>& Target) {
-        vector<vector<int>> RMatrix = Matrix;
-        
         if (Matrix == Target)
         {
             return true;
         }
+        
+        vector<vector<int>> RMatrix = Matrix;
         
         for (int n = 0; n < 3; n++)
         {
