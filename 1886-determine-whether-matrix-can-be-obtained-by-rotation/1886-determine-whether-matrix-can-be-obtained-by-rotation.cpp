@@ -3,7 +3,12 @@ public:
     bool findRotation(vector<vector<int>>& Matrix, vector<vector<int>>& Target) {
         vector<vector<int>> RMatrix = Matrix;
         
-        for (int n = 0; n < 4; n++)
+        if (Matrix == Target)
+        {
+            return true;
+        }
+        
+        for (int n = 0; n < 3; n++)
         {
             for (int j = 0; j < RMatrix.size(); j++)
             {
@@ -22,58 +27,5 @@ public:
         }
         
         return false;
-        
-        
-        /*
-        0 1
-        1 1
-        
-        1 1
-        0 1
-        
-        1 1
-        1 0
-        
-        1 0
-        1 1
-        
-        
-        0 1
-        1 0
-        
-        1 0
-        0 1
-        
-        0 1
-        1 0
-        
-        1 0
-        0 1
-        
-        
-        0 0 0
-        0 1 0
-        1 1 1
-        
-        0 0 1
-        0 1 1
-        0 0 1
-        
-        1 1 1
-        0 1 0
-        0 0 0
-        
-        1 0 0
-        1 1 0
-        1 0 0
-        
-        
-        1 0
-        0 1
-        1 0
-        
-        0 1 0
-        1 0 1
-        */ 
     }
 };
