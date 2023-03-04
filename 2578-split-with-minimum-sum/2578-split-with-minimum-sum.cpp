@@ -1,24 +1,23 @@
 class Solution {
 public:
     int splitNum(int Num) {
-        priority_queue<int, vector<int>, greater<int>> Numbers;
+        priority_queue<char, vector<char>, greater<char>> Numbers;
         string Num1 = "";
         string Num2 = "";
         
-        while (Num != 0)
+        for (char c: to_string(Num))
         {
-            Numbers.push(Num % 10);
-            Num /= 10;
+            Numbers.push(c);
         }
         
         while (Numbers.size() > 0)
         {
-            Num1 += to_string(Numbers.top());
+            Num1 += Numbers.top();
             Numbers.pop();
             
             if (Numbers.size() > 0)
             {
-                Num2 += to_string(Numbers.top());
+                Num2 += Numbers.top();
                 Numbers.pop();
                 continue;
             }
