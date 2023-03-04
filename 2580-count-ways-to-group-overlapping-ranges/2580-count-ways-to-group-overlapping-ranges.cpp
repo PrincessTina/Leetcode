@@ -12,8 +12,8 @@ public:
         });
         
         vector<int> Current = Ranges[0];
-        int MaxInt = 1000000007;
-        double n = 1;
+        const int MaxInt = 1000000007;
+        int Result = 2;
         
         for (int i = 1; i < Ranges.size(); i++)
         {
@@ -27,21 +27,14 @@ public:
                 continue;
             }
             
-            Current = Ranges[i];
-            n++;
-        }
-        
-        int Sum = 0;
-        int Result = 1;
-        
-        for (int i = 0; i < n; i++)
-        {
             Result *= 2;
             
             if (Result > MaxInt)
             {
                 Result %= MaxInt;
             }
+            
+            Current = Ranges[i];
         }
         
         return Result;
