@@ -29,7 +29,7 @@ public:
             
             Result *= 2;
             
-            if (Result > MaxInt)
+            if (Result >= MaxInt)
             {
                 Result %= MaxInt;
             }
