@@ -21,6 +21,7 @@ public:
             
             Cups.push_back(FirstCup - 1);
             push_heap(Cups.begin(), Cups.end());
+            
             Cups.push_back(SecondCup != 0 ? SecondCup - 1 : 0);
             push_heap(Cups.begin(), Cups.end());
             
@@ -28,28 +29,5 @@ public:
         }
         
         return Steps;
-        
-        // 4, 2, 1
-        
-        // 5, 4, 4
-        
-        // 4,4,3
-        // 3,3,3
-        // 2,2,3
-        // 2,1,2
-        // 1,1,1
-        // 0,0,1
-        // 0,0,0
-        
-        // 5,4,4
-        
-        // 4,3,4
-        // 3,2,4
-        // 2,1,4
-        // 1,0,4
-        // 0,0,3
-        // 0,0,2
-        // 0,0,1
-        // 0,0,0
     }
 };
