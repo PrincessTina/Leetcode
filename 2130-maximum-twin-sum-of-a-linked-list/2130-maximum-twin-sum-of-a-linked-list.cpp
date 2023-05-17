@@ -10,14 +10,12 @@
  */
 class Solution {
 public:
-    // 5 4 3 2 1 7 8
-    // 5 4 2 1
-    // 5 4
     int pairSum(ListNode* Node) {
         ListNode* Last = Node;
         vector<int> Sum;
-        int HalfNodes = 0;
         int Max = 0;
+        
+        int HalfNodes = 0;
         
         while (Last != nullptr)
         {
