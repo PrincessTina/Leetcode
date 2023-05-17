@@ -3,20 +3,20 @@ public:
     MyHashSet() {}
     
     void add(int Key) {
+//         while (Key >= Set.size())
+//         {
+//             int NewSize = Set.empty() ? 16 : Set.size() * 2;
+        
+//             while (Set.size() < NewSize)
+//             {
+//                 Set.push_back(0);
+//             }
+//         }
+        
         while (Key >= Set.size())
         {
-            int NewSize = Set.empty() ? 16 : Set.size() * 2;
-        
-            while (Set.size() < NewSize)
-            {
-                Set.push_back(0);
-            }
+            Set.push_back(0);
         }
-        
-        // while (Key >= Set.size())
-        // {
-        //     Set.push_back(0);
-        // }
         
         Set[Key] = 1;
     }
