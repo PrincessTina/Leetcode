@@ -1,6 +1,5 @@
 class Solution {
 public:
-    // 7,8,9,10 - 5,6,7,8
     int findContentChildren(vector<int>& Greed, vector<int>& Sizes) {
         sort(Greed.begin(), Greed.end());
         sort(Sizes.begin(), Sizes.end());
