@@ -10,10 +10,6 @@
  */
 class Solution {
 public:
-    // 1->2->3->4
-    // 1->2->3->4->5->6
-    // 1->2->4->5->6
-    // 1->2->4->3
     ListNode* swapPairs(ListNode* Head) {
         ListNode* PreHead = new ListNode();
         ListNode* Node = PreHead;
@@ -33,35 +29,5 @@ public:
         }
         
         return PreHead->next;
-        
-//         while (Node != nullptr && Node->next != nullptr)
-//         {
-//             if (Node == Head)
-//             {
-//                 Head = Node->next;
-//             }
-            
-//             ListNode* Temp = Node->next->next;
-//             Node->next->next = Node;
-//             Node->next = Temp;
-            
-//             Node = Node->next;
-//         }
-        
-//         while (Node != nullptr && Node->next != nullptr)
-//         {
-//             if (Node == Head)
-//             {
-//                 Head = Node->next;
-//             }
-            
-//             ListNode* Temp = Node->next->next;
-//             Node->next->next = Node;
-//             Node->next = Temp;
-            
-//             Node = Node->next;
-//         }
-        
-//         return Head;
     }
 };
