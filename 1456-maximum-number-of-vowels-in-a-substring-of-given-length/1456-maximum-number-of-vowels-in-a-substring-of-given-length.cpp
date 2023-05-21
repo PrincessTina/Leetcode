@@ -16,6 +16,11 @@ public:
         
         for (int i = 1; i <= String.size() - k; i++)
         {
+            if (Max == k)
+            {
+                return k;
+            }
+            
             if (IsVowel(String[i - 1]))
             {
                 Vowels--;
@@ -29,11 +34,6 @@ public:
             if (Vowels > Max)
             {
                 Max = Vowels;
-            }
-            
-            if (Max == k)
-            {
-                return k;
             }
         }
         
