@@ -34,7 +34,7 @@ private:
             return;
         }
         
-        for (char Symbol: Map[Digits[Index]])
+        for (char& Symbol: Map[Digits[Index]])
         {
             Combination[Index] = Symbol;
             Recursion(Digits, Index + 1, Combination);
