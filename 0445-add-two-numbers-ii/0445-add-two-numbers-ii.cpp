@@ -29,9 +29,6 @@ public:
         ListNode* Prev = nullptr;
         int Rest = 0;
         
-        // - - 2 1
-        // 7 2 4 3
-        
         while (true)
         {
             ListNode* Current = nullptr;
