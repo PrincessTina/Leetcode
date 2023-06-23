@@ -29,20 +29,20 @@ public:
         return Input;
     }
     
-    bool IsVowel(char Symbol)
+    bool IsVowel(char& Symbol)
     {
-        if (Symbol >= 'A' && Symbol <= 'Z')
-        {
-            Symbol += 'a' - 'A';
-        }
-        
         switch (Symbol)
         {
             case 'a':
+            case 'A':
             case 'e':
+            case 'E':
             case 'i':
+            case 'I':
             case 'o':
+            case 'O':
             case 'u':
+            case 'U':
                 return true;
             default:
                 return false;
